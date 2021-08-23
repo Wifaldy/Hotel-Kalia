@@ -1,0 +1,130 @@
+.navbar {
+    background-color: white !important;
+    border-bottom: 1px solid rgba(187, 186, 186, 0.3);
+}
+
+img.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.nav-item:hover {
+    border-bottom: 1px solid rgb(25, 135, 84) !important;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.navbar-brand {
+    margin-left: 80px;
+}
+
+.register {
+    margin-left: 24px;
+}
+
+.navbar-nav {
+    margin-right: 80px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.vertical-border {
+    margin-left: 24px;
+    border-right: 1px solid gray;
+}
+
+.left p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.left h1 {
+    padding-top: 5%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+}
+
+.left a {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 5%;
+}
+
+.room {
+    background-color: #F4F7FA;
+}
+
+.room h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+}
+
+.container-carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-item-content {
+    padding: 2% 0 0 3%;
+}
+
+.carousel-item-content h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.carousel-inner {
+    padding: 30px 30px 70px 30px;
+    border: none !important;
+    background-color: #F4F7FA !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next:hover {
+    color: #333333 !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    color: #999999 !important;
+}
+
+.carousel-control-prev {
+    margin-left: -14%;
+}
+
+.carousel-control-next {
+    margin-right: -14%;
+}
+
+.carousel {
+    width: 73%;
+}
+
+.gallery h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.gallery .card {
+    margin-left: 5% !important;
+}
+
+.galllery-pics {
+    border: none!;
+}
+
+@media screen and (max-width: 900px) {
+    .flex-items {
+        flex-direction: column !important;
+        justify-content: start !important;
+    }
+    .img-items {
+        width: 100% !important;
+    }
+    .gallery-flex {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .gallery .card {
+        width: 60% !important;
+        margin-bottom: 7% !important;
+    }
+}
