@@ -39,7 +39,7 @@
           <li class="nav-item ">
             <a class="nav-link text-success" href="login">Login</a>
           </li>
-          <a class="nav-link btn btn-success text-white me-1 register" href="#" style="width: 90px;">Register</a>
+          <a class="nav-link btn btn-success text-white me-1 register" href="register" style="width: 90px;">Register</a>
         </ul>
       </div>
     </div>

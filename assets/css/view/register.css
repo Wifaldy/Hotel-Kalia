@@ -24,6 +24,7 @@ img {
     background-color: white !important;
     border-radius: 20px !important;
     padding: 40px 50px 50px 50px !important;
+    margin-bottom: 120px !important;
 }
 
 .form-control {
@@ -46,4 +47,9 @@ img {
 
 p {
     font-size: 14px;
+}
+
+small {
+    padding-top: 3px;
+    padding-left: 2px;
 }

@@ -21,22 +21,25 @@
   </div>
 
 
-  <form action="afterLogin" method="POST">
+  <form action="" method="POST">
     <div class="d-flex justify-content-center align-items-center" style="height: 50vh;">
       <div class="card">
-        <h3 class="text-center pb-5">Login</h3>
+        <h3 class="text-center pb-4">Login</h3>
+        <?= $this->session->flashdata('successReg'); ?>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username" id="username" autocomplete="off">
-          <label for="floatingInput">Username</label>
+          <input type="text" class="form-control" id="floatingInput" placeholder="Email" name="email" id="email" autocomplete="off" value="<?= set_value('email'); ?>">
+          <label for="floatingInput">Email</label>
+          <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
         </div>
         <div class="form-floating">
           <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" id="password" autocomplete="off">
           <label for="floatingPassword">Password</label>
+          <?= form_error('password', '<small class="text-danger">', '</small>'); ?>
         </div>
         <div class="d-flex justify-content-between mt-3">
-          <p>Belum memiliki akun? Daftar <a class="text-primary toRegister" href="#">disini</a></p>
+          <p>Don't have an account ? click <a class="text-primary toRegister" href="register">here</a></p>
           <div>
-            <button type="submit" class="btn btn-primary" style="width: 80px;">Login</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
           </div>
         </div>
       </div>
