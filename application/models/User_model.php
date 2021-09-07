@@ -13,4 +13,9 @@ class User_model extends CI_Model
 
     $this->db->insert('user', $data);
   }
+
+  public function getEmail($email)
+  {
+    return $this->db->get_where('user', ['email' => $email])->row_array();
+  }
 }

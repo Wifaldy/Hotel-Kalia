@@ -8,8 +8,24 @@ img.logo {
     height: 60px;
 }
 
-.nav-item:hover {
-    border-bottom: 1px solid rgb(25, 135, 84) !important;
+.profiles {
+    /* margin-left: 30px; */
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+img.profile {
+    width: 30px;
+    height: 30px;
+}
+
+.prof-text {
+    padding-top: 3px;
+    padding-left: 20px;
+}
+
+.item:hover {
+    border-bottom: 1px solid rgb(25, 135, 84);
 }
 
 .nav-item {
@@ -31,10 +47,11 @@ img.logo {
 
 .vertical-border {
     margin-left: 24px;
+    margin-right: 15px;
     border-right: 1px solid gray;
 }
 
-.left p {
+p {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -82,6 +99,10 @@ img.logo {
     color: #333333 !important;
 }
 
+.img-items {
+    border-radius: 20px;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
     color: #999999 !important;
@@ -103,18 +124,32 @@ img.logo {
     font-family: 'Montserrat', sans-serif;
 }
 
-.gallery .card {
-    margin-left: 5% !important;
-}
-
 .galllery-pics {
     border: none!;
+}
+
+.gallery-items,
+.gallery-card {
+    border-radius: 20px;
+}
+
+.gallery-card {
+    border: none;
+}
+
+.gallery-card:hover {
+    box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+    transition: all 0.3s ease;
+}
+
+h6 {
+    font-family: 'Montserrat', sans-serif;
 }
 
 @media screen and (max-width: 900px) {
     .flex-items {
         flex-direction: column !important;
-        justify-content: start !important;
+        padding: 0 10%;
     }
     .img-items {
         width: 100% !important;

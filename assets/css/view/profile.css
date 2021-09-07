@@ -1,0 +1,103 @@
+.navbar {
+    background-color: white !important;
+    border-bottom: 1px solid rgba(187, 186, 186, 0.3);
+}
+
+img.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.profiles {
+    /* margin-left: 30px; */
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+img.profile {
+    width: 30px;
+    height: 30px;
+}
+
+.prof-text {
+    padding-top: 3px;
+    padding-left: 20px;
+}
+
+.item:hover {
+    border-bottom: 1px solid rgb(25, 135, 84);
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.navbar-brand {
+    margin-left: 80px;
+}
+
+.register {
+    margin-left: 24px;
+}
+
+.navbar-nav {
+    margin-right: 80px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.vertical-border {
+    margin-left: 24px;
+    margin-right: 15px;
+    border-right: 1px solid gray;
+}
+
+img.profile-display {
+    margin-top: 4%;
+    margin-left: 10%;
+    width: 15%;
+    height: 15%;
+}
+
+.nama {
+    margin-top: 12%;
+    margin-left: 5%;
+}
+
+.email-text {
+    font-size: 20px;
+    margin-top: 4%;
+    margin-bottom: 10%;
+    padding-left: 6%;
+}
+
+.edit-btn {
+    margin-left: 5%;
+    width: 20%;
+}
+
+.logout-btn {
+    margin-left: 8%;
+    width: 25%;
+}
+
+h1,
+h2,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a,
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.harga-tanggal {
+    /* background-color: black; */
+    padding: 0 !important;
+    margin: 0!important;
+    height: 17%;
+}
+
+.trash {
+    padding-right: 5%;
+}

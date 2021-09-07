@@ -1,0 +1,19 @@
+.content {
+    margin-left: 7%;
+}
+
+.left-content h6 {
+    font-size: 40px;
+}
+
+.img-content {
+    border-radius: 20px;
+    width: 80%;
+    height: 60%;
+}
+
+@media screen and (max-width: 900px) {
+    p {
+        font-size: 12px;
+    }
+}

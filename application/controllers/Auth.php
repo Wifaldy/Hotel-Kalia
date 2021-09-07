@@ -17,6 +17,38 @@ class Auth extends CI_Controller
     if ($this->form_validation->run() == false) {
       $this->load->view('login');
     } else {
+      $this->_login();
+    }
+  }
+
+  private function _login()
+  {
+    $email = $this->input->post('email');
+    $pass = $this->input->post('password');
+
+    $user = $this->User_model->getEmail($email);
+    if ($user) {
+      if (password_verify($pass, $user['password'])) {
+        $data = [
+          'email' => $user['email'],
+          'no_hp' => $user['no_hp'],
+          'is_login' => true
+        ];
+        $this->session->set_userdata($data);
+        redirect('home');
+      } else {
+        $this->session->set_flashdata('successReg', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+      Wrong password
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>');
+        redirect('auth');
+      }
+    } else {
+      $this->session->set_flashdata('successReg', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+      Your email has not been registered
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>');
+      redirect('auth');
     }
   }
 
@@ -42,5 +74,13 @@ class Auth extends CI_Controller
     </div>');
       redirect('auth');
     }
+  }
+  public function logout()
+  {
+    $this->session->unset_userdata('email');
+    $this->session->unset_userdata('no_hp');
+    $this->session->unset_userdata('is_login');
+    $this->session->sess_destroy();
+    redirect('home');
   }
 }

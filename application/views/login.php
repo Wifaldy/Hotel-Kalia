@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="<?= base_url() ?>assets/css/view/login.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,13 +15,12 @@
 
 <body>
   <div class="logo">
-    <a href="Home">
+    <a href="<?= base_url() ?>home">
       <img src="<?= base_url() ?>/assets/img/LogoKalia.png" alt="">
     </a>
   </div>
 
-
-  <form action="" method="POST">
+  <form action="<?= base_url('auth') ?>" method="POST">
     <div class="d-flex justify-content-center align-items-center" style="height: 50vh;">
       <div class="card">
         <h3 class="text-center pb-4">Login</h3>
@@ -45,7 +44,7 @@
       </div>
     </div>
   </form>
-  <script src="<?= base_url() ?>assets/js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 
 </html>
