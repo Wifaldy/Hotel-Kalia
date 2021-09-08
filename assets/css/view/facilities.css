@@ -12,6 +12,11 @@
     height: 60%;
 }
 
+.img-content:hover {
+    box-shadow: -1px 9px 25px -10px rgba(102, 102, 102, 0.75);
+    transition: all 0.5s;
+}
+
 @media screen and (max-width: 900px) {
     p {
         font-size: 12px;

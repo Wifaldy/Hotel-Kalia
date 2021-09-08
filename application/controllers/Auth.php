@@ -30,12 +30,10 @@ class Auth extends CI_Controller
     if ($user) {
       if (password_verify($pass, $user['password'])) {
         $data = [
-          'email' => $user['email'],
-          'no_hp' => $user['no_hp'],
-          'is_login' => true
+          'email' => $user['email']
         ];
         $this->session->set_userdata($data);
-        redirect('home');
+        redirect('');
       } else {
         $this->session->set_flashdata('successReg', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
       Wrong password
@@ -81,6 +79,6 @@ class Auth extends CI_Controller
     $this->session->unset_userdata('no_hp');
     $this->session->unset_userdata('is_login');
     $this->session->sess_destroy();
-    redirect('home');
+    redirect('');
   }
 }

@@ -58,4 +58,4 @@ $route['facilities'] = 'Home/facilities';
 $route['home'] = 'Home/index';
 $route['profile'] = 'User/index';
 $route['room'] = 'Home/room';
-$route['user'] = 'User/detail';
+$route['detail'] = 'User/detail';

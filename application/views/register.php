@@ -15,7 +15,7 @@
 
 <body>
   <div class="logo">
-    <a href="Home">
+    <a href="<?= base_url() ?>">
       <img src="<?= base_url() ?>/assets/img/LogoKalia.png" alt="">
     </a>
   </div>

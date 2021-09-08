@@ -1,52 +1,17 @@
-.navbar {
-    background-color: white !important;
-    border-bottom: 1px solid rgba(187, 186, 186, 0.3);
+.img-content {
+    border-radius: 20px;
+    width: 520px;
+    height: 360px;
 }
 
-img.logo {
-    width: 60px;
-    height: 60px;
+.description {
+    margin-top: 5%;
 }
 
-.profiles {
-    /* margin-left: 30px; */
-    padding-top: 5px;
-    text-decoration: none;
+.amenties {
+    background-color: rgb(236, 236, 236);
 }
 
-img.profile {
-    width: 30px;
-    height: 30px;
-}
-
-.prof-text {
-    padding-top: 3px;
-    padding-left: 20px;
-}
-
-.item:hover {
-    border-bottom: 1px solid rgb(25, 135, 84);
-}
-
-.nav-item {
-    margin-left: 20px;
-}
-
-.navbar-brand {
-    margin-left: 80px;
-}
-
-.register {
-    margin-left: 24px;
-}
-
-.navbar-nav {
-    margin-right: 80px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.vertical-border {
-    margin-left: 24px;
-    margin-right: 15px;
-    border-right: 1px solid gray;
+.p-amenties {
+    font-size: 14px;
 }

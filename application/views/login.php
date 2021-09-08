@@ -15,7 +15,7 @@
 
 <body>
   <div class="logo">
-    <a href="<?= base_url() ?>home">
+    <a href="<?= base_url() ?>">
       <img src="<?= base_url() ?>/assets/img/LogoKalia.png" alt="">
     </a>
   </div>
@@ -28,7 +28,7 @@
         <div class="form-floating mb-3">
           <input type="text" class="form-control" id="floatingInput" placeholder="Email" name="email" id="email" autocomplete="off" value="<?= set_value('email'); ?>">
           <label for="floatingInput">Email</label>
-          <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
+          <?= form_error('email', '<small class="text-danger ps-1">', '</small>'); ?>
         </div>
         <div class="form-floating">
           <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" id="password" autocomplete="off">

@@ -10,8 +10,8 @@ class Home extends CI_Controller
 
   public function index()
   {
+    $data['title'] = 'Home';
     $data['user'] = $this->User_model->getEmail($this->session->userdata('email'));
-    $data['is_login'] = $this->session->userdata('is_login');
     $data['style'] = 'index';
     $this->load->view('templates/header', $data);
     $this->load->view('index', $data);
@@ -20,8 +20,8 @@ class Home extends CI_Controller
 
   public function facilities()
   {
+    $data['title'] = 'Facility';
     $data['user'] = $this->User_model->getEmail($this->session->userdata('email'));
-    $data['is_login'] = $this->session->userdata('is_login');
     $data['style'] = 'facilities';
     $this->load->view('templates/header', $data);
     $this->load->view('facilities', $data);
@@ -30,8 +30,8 @@ class Home extends CI_Controller
 
   public function room()
   {
+    $data['title'] = 'Room';
     $data['user'] = $this->User_model->getEmail($this->session->userdata('email'));
-    $data['is_login'] = $this->session->userdata('is_login');
     $data['style'] = 'room';
     $this->load->view('templates/header', $data);
     $this->load->view('room', $data);

@@ -29,7 +29,7 @@
               <div class="carousel-item-content">
                 <h4>Deluxe</h4>
                 <p>Our stylish 88 Deluxe Rooms are 30 square meters in size, equipped with deluxe amenities including individual reading lamps and bathtubs that provide complete comfort and convenience.</p>
-                <?php if ($is_login) : ?>
+                <?php if ($this->session->has_userdata('email')) : ?>
                   <a href="detail" class="btn btn-warning text-white rounded-pill">
                   <?php else : ?>
                     <a href="login" class="btn btn-warning text-white rounded-pill">
