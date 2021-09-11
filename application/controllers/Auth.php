@@ -62,7 +62,6 @@ class Auth extends CI_Controller
 
 
     if ($this->form_validation->run() == FALSE) {
-
       $this->load->view('register');
     } else {
       $this->User_model->insertUserData();

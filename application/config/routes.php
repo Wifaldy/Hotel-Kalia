@@ -59,3 +59,6 @@ $route['home'] = 'Home/index';
 $route['profile'] = 'User/index';
 $route['room'] = 'Home/room';
 $route['detail'] = 'User/detail';
+$route['detail/[^1-5]'] = 'User/detail';
+$route['detail/[1-5]'] = 'User/detail';
+$route['order'] = 'User/order';

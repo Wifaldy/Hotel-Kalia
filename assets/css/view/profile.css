@@ -5,6 +5,11 @@ img.profile-display {
     height: 200px;
 }
 
+.profile-wrapper {
+    width: 200px;
+    height: 200px;
+}
+
 .nama {
     margin-top: 12%;
     margin-left: 5%;

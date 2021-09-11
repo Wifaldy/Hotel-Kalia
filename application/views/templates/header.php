@@ -32,15 +32,15 @@
             <a class="nav-link text-success" href="<?= base_url() ?>">Home</a>
           </li>
           <li class="nav-item item">
-            <a class="nav-link text-success" href="room">Rooms</a>
+            <a class="nav-link text-success" href="<?= base_url() ?>room">Rooms</a>
           </li>
           <li class="nav-item item">
-            <a class="nav-link text-success" href="facilities">Facilities</a>
+            <a class="nav-link text-success" href="<?= base_url() ?>facilities">Facilities</a>
           </li>
           <div class="vertical-border"></div>
           <?php if ($this->session->has_userdata('email')) : ?>
             <li class="nav-item">
-              <a href="profile" class="d-flex profiles">
+              <a href="<?= base_url() ?>profile" class="d-flex profiles">
                 <img src="<?= base_url() ?>/assets/img/Profile.png" alt="Profile" class="profile">
                 <p class="prof-text text-success">Profile</p>
               </a>

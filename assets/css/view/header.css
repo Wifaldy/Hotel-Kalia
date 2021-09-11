@@ -60,7 +60,9 @@ h6 {
 }
 
 p,
-label {
+label,
+button,
+a {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
 }

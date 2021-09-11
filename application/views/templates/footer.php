@@ -12,9 +12,9 @@
       <div class="d-flex flex-column " style="width: 33%;">
         <div class="text-center">
           <h6 style="margin-top: 5%;">MENU</h6>
-          <a href="home" class="text-decoration-none text-dark">Home</a><br>
-          <a href="facilities" class="text-decoration-none text-dark">Room</a><br>
-          <a href="#" class="text-decoration-none text-dark">Facilities</a>
+          <a href="" class="text-decoration-none text-dark">Home</a><br>
+          <a href="room" class="text-decoration-none text-dark">Room</a><br>
+          <a href="facilities" class="text-decoration-none text-dark">Facilities</a>
         </div>
       </div>
       <div class="d-flex flex-column" style="width: 33%;">
