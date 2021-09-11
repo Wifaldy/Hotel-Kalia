@@ -41,7 +41,7 @@
           <?php if ($this->session->has_userdata('email')) : ?>
             <li class="nav-item">
               <a href="<?= base_url() ?>profile" class="d-flex profiles">
-                <img src="<?= base_url() ?>/assets/img/Profile.png" alt="Profile" class="profile">
+                <img src="<?= base_url() . '/assets/img/profile/' . $user['ava'] ?>" alt="Profile" class="profile">
                 <p class="prof-text text-success">Profile</p>
               </a>
             </li>

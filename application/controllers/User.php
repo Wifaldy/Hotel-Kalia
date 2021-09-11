@@ -54,4 +54,43 @@ class User extends CI_Controller
       echo "BERHASIL";
     }
   }
+
+  public function updatephoto()
+  {
+    $data['user'] = $this->User_model->getEmail($this->session->userdata('email'));
+    $upload_image = $_FILES['image']['name'];
+    if ($upload_image) {
+      $config['allowed_types'] = 'gif|jpg|png|jpeg';
+      $config['max_size'] = '2048';
+      $config['upload_path'] = './assets/img/profile/';
+      $this->upload->initialize($config);
+      if ($this->upload->do_upload('image')) {
+        $old_image = $data['user']['ava'];
+        if ($old_image != 'Profile.png') {
+          unlink(FCPATH . 'assets/img/profile/' . $old_image);
+        }
+        $new_image = $this->upload->data('file_name');
+        $this->User_model->updatePict($new_image);
+        redirect('profile');
+      } else {
+        $this->session->set_flashdata('error_display', '<small class="text-danger ps-5">' . $this->upload->display_errors() . '</small>');
+        redirect('profile');
+      }
+    }
+  }
+
+  public function editprofile()
+  {
+    $this->form_validation->set_rules('fullname', 'Full Name', 'required|trim');
+    $this->form_validation->set_rules('no_hp', 'No.HP', 'required|trim|numeric');
+
+    if ($this->form_validation->run() == FALSE) {
+      $this->session->set_flashdata('error_name', form_error('fullname', '<small class="text-danger">', '</small>'));
+      $this->session->set_flashdata('error_nohp', form_error('no_hp', '<small class="text-danger">', '</small>'));
+      redirect('profile');
+    } else {
+      $this->User_model->editProfile($this->input->post('fullname'), $this->input->post('no_hp'));
+      redirect('profile');
+    }
+  }
 }

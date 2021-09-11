@@ -62,3 +62,5 @@ $route['detail'] = 'User/detail';
 $route['detail/[^1-5]'] = 'User/detail';
 $route['detail/[1-5]'] = 'User/detail';
 $route['order'] = 'User/order';
+$route['updatephoto'] = 'User/updatephoto';
+$route['editprofile'] = 'User/editprofile';

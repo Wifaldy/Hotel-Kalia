@@ -6,7 +6,7 @@
         <h1>Welcome to our Luxury Hotel</h1>
         <p class="mt-3">Welcome to Kalia Hotel Medan, formerly known as Grand Swiss-Belhotel Medan, your premiere choice of modern lifestyle hotel with 242-rooms located in the central business district of Medan, North Sumatera. Our hotel is located in the Cambridge City Square area merging with premium lifestyle Cambridge Mall and Luxurious Condominium that will complete your experience and fulfill your needs.
         </p>
-        <a href="#" class="btn btn-outline-success rounded-pill">Book Now <i class="bi bi-arrow-right"></i></a>
+        <a href="room" class="btn btn-outline-success rounded-pill">Book Now <i class="bi bi-arrow-right"></i></a>
       </div>
       <div class="col-lg-6 mx-auto col-sm-12">
         <img src="<?= base_url() ?>assets/img/Hotel.png" alt="" class="img-fluid">
