@@ -1,0 +1,56 @@
+.logo {
+    height: 150px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p,
+label,
+button,
+a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.payment-method {
+    margin-top: -16px;
+    margin-bottom: -16px;
+    width: fit-content;
+}
+
+.payment-method:hover {
+    cursor: pointer;
+}
+
+.input-group-text {
+    background-color: white;
+}
+
+.input-post {
+    border: none;
+}
+
+.input-post:focus {
+    box-shadow: none;
+}
+
+.icon-input {
+    border: none;
+}
+
+.bordering {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.bordering1 {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

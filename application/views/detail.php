@@ -26,7 +26,7 @@
         </div>
         <hr>
         <h4>Duration</h4>
-        <form action="<?= base_url() ?>order" method="POST">
+        <form action="<?= base_url() ?>payment" method="POST">
           <input type="hidden" id="id" name="id" value="<?= $detailRoom['id'] ?>">
           <div class="row">
             <div class="col-lg-6">
@@ -46,7 +46,7 @@
           </div>
           <hr>
           <h4>Available Room</h4>
-          <select class="form-select form-select mb-3 mt-3" style="width: 40%;">
+          <select class="form-select form-select mb-3 mt-3" style="width: 40%;" id="no_kamar" name="no_kamar">
             <?php foreach ($avaiRoom as $avai) : ?>
               <option value="<?= $avai['no_room'] ?>">Room <?= $avai['no_room'] ?></option>
             <?php endforeach; ?>
@@ -58,3 +58,36 @@
     </div>
   </div>
 </div>
+
+<script>
+  function getminDate(yyyy, mm, dd) {
+    if (dd < 10) {
+      dd = '0' + dd;
+    }
+    if (mm < 10) {
+      mm = '0' + mm;
+    }
+    return yyyy + '-' + mm + '-' + dd;
+  }
+  let today = new Date();
+  yyyy = today.getFullYear();
+  mm = today.getMonth() + 1;
+  dd = today.getDate();
+  let checkin = document.getElementById('checkin');
+  let checkout = document.getElementById('checkout');
+  checkin.setAttribute('min', getminDate(yyyy, mm, dd));
+  checkout.setAttribute('disabled', true);
+  checkin.addEventListener('change', () => {
+    checkout.removeAttribute('disabled');
+    let checkoutDate = checkin.value;
+    checkoutDate = checkoutDate.split("-");
+    checkout.setAttribute('min', `${checkoutDate[0]}-${checkoutDate[1]}-${parseInt(checkoutDate[2]) + 1}`);
+    console.log(checkoutDate);
+  });
+  checkout.addEventListener('change', () => {
+    let checkinDate = checkout.value;
+    checkinDate = checkinDate.split("-");
+    checkin.setAttribute('max', `${checkinDate[0]}-${checkinDate[1]}-${parseInt(checkinDate[2]) - 1}`);
+    console.log(checkinDate);
+  });
+</script>

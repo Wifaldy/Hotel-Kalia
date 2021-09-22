@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-        <div class="text-center pe-sm-5 pe-lg-0">
+        <div class="text-center pe-sm-5 pe-lg-o">
           <div class="text-center">
             <img src="<?= base_url() . '/assets/img/profile/' . $user['ava'] ?>" alt="Profile" class="profile-display">
             <form action="updatephoto" method="POST" id="submit-foto" enctype="multipart/form-data">
@@ -67,34 +67,44 @@
   <div class="container pt-3">
     <h2 class="text-sm-center text-lg-start">Booking History</h2>
     <div class="row ">
-      <div class="col-lg-3 col-md-6 col-12-sm">
-        <div class="d-flex justify-content-center">
-          <div class="card mt-3" style="width: 300px; height:250px; border-radius:15px;">
-            <div class="d-flex w-100">
-              <h6 style="padding-top:5%; padding-left:7%;">Room 1</h6>
-              <p style="padding-top: 5%; padding-left:40%" class="text-danger">Canceled</p>
-            </div>
-            <div class="ps-4">
-              <h6 style="padding: 5px 1px; border-radius:10px; width:60%; background-color:#008F97" class="text-center text-white">Suite</h6>
-            </div>
-            <div class="d-flex harga-tanggal ">
-              <p style="padding-left: 7%; padding-top:5%;">Price</p>
-              <p style="padding-top:5%; padding-left:20%;">Rp.300.000</p>
-            </div>
-            <div class="d-flex p-0">
-              <p style="padding-left: 7%; padding-top:-5%;">Date</p>
-              <p style="padding-top: -5%; padding-left:20%;">4 March 2026</p>
-            </div>
-            <div class="d-flex justify-content-end ">
-              <div class="me-2">
-                <a href="" class="trash">
-                  <i class="bi bi-trash text-danger" style="font-size: 42px;"></i>
-                </a>
+      <?php foreach ($history as $hist) : ?>
+        <div class="col-lg-3 col-md-6 col-12-sm">
+          <div class="d-flex justify-content-center">
+            <div class="card mt-3" style="width: 300px; height:250px; border-radius:15px;">
+              <div class="d-flex w-100">
+                <h6 style="padding-top:5%; padding-left:7%;">Room <?= $hist['room'] ?></h6>
+                <?php if ($hist['status'] == 1) { ?>
+                  <p style="padding-top: 5%; padding-left:40%" class="text-danger">
+                    Unpaid</p>
+                <?php } elseif ($hist['status'] == 2) { ?>
+                  <p style="padding-top: 5%; padding-left:40%" class="text-success">
+                    Paid</p>
+                <?php } ?>
+              </div>
+              <div class="ps-4">
+                <h6 style="padding: 5px 1px; border-radius:10px; width:60%; background-color:#008F97" class="text-center text-white"><?= $hist['class'] ?></h6>
+              </div>
+              <div class="d-flex harga-tanggal ">
+                <p style="padding-left: 7%; padding-top:5%;">Price</p>
+                <p style="padding-top:5%; padding-left:20%;">Rp <?= number_format($hist['price_booking'], 0, '', '.') ?></p>
+              </div>
+              <div class="d-flex p-0">
+                <p style="padding-left: 7%; padding-top:-5%;">Date</p>
+                <p style="padding-top: -5%; padding-left:20%;"><?= date('d M Y', $hist['transaction_created']) ?></p>
+              </div>
+              <div class="d-flex justify-content-end pe-3">
+                <?php if ($hist['status'] == 1) : ?>
+                  <form action="payment" method="POST">
+                    <input type="hidden" name="price" id="price" value="<?= $hist['price_booking'] ?>">
+                    <input type="hidden" name="no_kamar" id="no_kamar" value="<?= $hist['room'] ?>">
+                    <button type="submit" class="text-decoration-none text-white btn btn-danger">Pay</button>
+                  </form>
+                <?php endif; ?>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      <?php endforeach; ?>
     </div>
   </div>
 

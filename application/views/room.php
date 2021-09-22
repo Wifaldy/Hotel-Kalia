@@ -4,9 +4,7 @@
     <h6 class="text-center" style="font-size: 40px;">ROOMS</h6>
   </div>
 </div>
-
 <hr class="mt-5" style="opacity: 0.1;">
-
 <!-- Content -->
 <div class="container ">
   <?php foreach ($room as $r) : ?>
@@ -26,5 +24,4 @@
     </div>
     <hr class=" mt-5" style="width: 90%; margin:auto">
   <?php endforeach; ?>
-
 </div>
